@@ -7,9 +7,9 @@ nano /etc/default/grub
 
 update-grub
 
-pacman -S qemu virt-manager ovmf dnsmasq ebtables iptables
+pacman -S nano qemu virt-manager ovmf dnsmasq ebtables iptables
 
-rc-update add libvirtd.service boot
+rc-update add libvirtd boot
 
 cp vfio-pci-override.sh /usr/bin/vfio-pci-override.sh
 
@@ -45,7 +45,7 @@ mkdir -p /etc/qemu/firmware
 
 sed 's#qemu/edk2-x86_64-code.fd#ovmf/x64/OVMF_CODE.fd#;s#qemu/edk2-i386-vars.fd#ovmf/x64/OVMF_VARS.fd#' < /usr/share/qemu/firmware/60-edk2-x86_64.json > /etc/qemu/firmware/10-ovmf-workaround.json
 
-rc-update start libvirtd
+rc-service libvirtd start
 
 ############################
 
