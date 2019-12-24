@@ -7,7 +7,7 @@ nano /etc/default/grub
 
 update-grub
 
-pacman -S vim qemu virt-manager ovmf dnsmasq ebtables iptables
+pacman -S qemu virt-manager ovmf dnsmasq ebtables iptables
 
 rc-update add livirt.service boot
 
