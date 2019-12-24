@@ -9,7 +9,11 @@ update-grub
 
 pacman -S nano qemu virt-manager ovmf dnsmasq ebtables iptables dnsmasq
 
-rc-update add libvirtd boot
+rc-update add libvirtd sysinit
+
+rc-update add virtlockd sysinit
+
+rc-update add virtlogd sysinit
 
 cp vfio-pci-override.sh /usr/bin/vfio-pci-override.sh
 
