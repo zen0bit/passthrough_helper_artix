@@ -1,4 +1,4 @@
-# passthrough_helper_manjaro
+# passthrough_helper_artix
 
 Run this script using su instead of sudo. The ">" redirects of echo will not work otherwise. 
 
